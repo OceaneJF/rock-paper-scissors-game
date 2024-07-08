@@ -14,19 +14,14 @@ cards.forEach(card => {
     card.addEventListener('click', (event) => {
         let choice = event.target.id;
         const randomNumber = getRandomNumber();
-        console.log(randomNumber);
         if (choice != randomNumber) {
-            console.log(isNaN(choice));
             switch (choice) {
                 case "1":
-                    console.log("fgs");
                     if (randomNumber == 2) {
                         scoreC += 1;
-                        console.log(scoreC);
                         message.textContent = "You lose, paper beats rock"
                     } else {
                         scoreP += 1;
-                        console.log(scoreP);
                         message.textContent = "You win, rock beats scissors"
                     }
                     break;
